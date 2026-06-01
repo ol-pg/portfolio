@@ -1,0 +1,294 @@
+%-------------------------
+% Resume in Latex 
+%------------------------
+
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{makecell}
+\usepackage[link=off]{phonenumbers}
+\usepackage{ragged2e}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\usepackage[margin=0.3in]{geometry}
+\addtolength{\oddsidemargin}{-0.0in}
+\addtolength{\evensidemargin}{-0.0in}
+\addtolength{\textwidth}{0in}
+\addtolength{\topmargin}{10pt}
+\addtolength{\textheight}{0.0in}
+\setlength{\footskip}{15pt}
+
+\urlstyle{same}
+
+\usepackage{xcolor}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue!50!red,
+  urlcolor=black!70!black,
+  pdfnewwindow=true
+}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-10pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+\def \ifempty#1{\def\temp{#1} \ifx\temp\empty }
+
+\newcommand{\resumeItem}[2]{
+  \item\small{
+  	\ifempty{#1}#2\else\textbf{#1}{: #2 \vspace{-2pt}}\fi
+  }
+}
+
+\usepackage[dvipsnames]{xcolor}
+\definecolor{mygray}{gray}{0}
+\usepackage{fancybox}
+\usepackage{lmodern}
+\usepackage{tikz}
+
+\tikzset{rndblock/.style={rounded corners,rectangle,draw,outer sep=0pt}}
+
+\newcommand{\tframed}[2][]{\tikz[baseline=(h.base)]\node[rndblock,#1] (h) {\color{black}{#2}};}
+
+\newcommand*{\mystrut}{\rule[-0.2\baselineskip]{0pt}{0.8\baselineskip}}
+\newcommand{\skill}[1]{\tframed[lightgray]{\mystrut#1}}
+
+\newcommand{\resumeSubheading}[4]{
+  \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \vspace{-12pt}\textbf{#3} & \textcolor{mygray}{\textit{\small #2}} \\
+      \textit{\small#1} & \textcolor{mygray}{\textit{\small #4}} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeExpSubheading}[5]{
+  \vspace{3pt}
+  \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \vspace{2pt} \textbf{#1}  & \textcolor{mygray}{\small #2} \\
+      \textit{#3} & \textcolor{mygray}{\textit{\small #4}} \\
+      {\scriptsize#5}
+    \end{tabular*}\vspace{3pt}
+}
+
+\newcommand{\resumeExpJointSubheading}[5]{
+  \vspace{-14pt}
+  \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \vspace{2pt} \textbf{#1}  & \textcolor{mygray}{\small #2} \\
+      \textit{#3} & \textcolor{mygray}{\textit{\small #4}} \\
+      {\scriptsize#5}
+    \end{tabular*}\vspace{3pt}
+}
+
+\newcommand{\resumeProjSubheading}[5]{
+  \vspace{-10pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \vspace{2pt} \textbf{#1}  & \textcolor{mygray}{\small #2} \\
+      \textbf{#3} & \textcolor{mygray}{\textit{\small #4}} \\
+      {\scriptsize#5}
+    \end{tabular*}\vspace{3pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.2in]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\usepackage{changepage}
+\newcommand{\resumeDesc}[1]{\begin{adjustwidth}{5pt}{0pt}\vspace{-2pt}{#1}\end{adjustwidth}}
+
+\newcommand{\ExternalLink}{
+    \tikz[x=1.2ex, y=1.2ex, baseline=-0.05ex]{
+        \begin{scope}[x=1ex, y=1ex]
+            \clip (-0.1,-0.1) 
+                --++ (-0, 1.2) 
+                --++ (0.6, 0) 
+                --++ (0, -0.6) 
+                --++ (0.6, 0) 
+                --++ (0, -1);
+            \path[draw, 
+                line width = 0.5, 
+                rounded corners=0.5] 
+                (0,0) rectangle (1,1);
+        \end{scope}
+        \path[draw, line width = 0.5] (0.5, 0.5) 
+            -- (1, 1);
+        \path[draw, line width = 0.5] (0.6, 1) 
+            -- (1, 1) -- (1, 0.6);
+        }
+    }
+    
+\definecolor{Blue1}{HTML}{4D4EDC}
+\newcommand{\MYhref}[3][Blue1]{\href{#2}{\color{#1}{#3}}}
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{center}\textbf{\Large Olga Pogodina}\end{center}
+\vspace{-12pt}
+\begin{center}
+Email: \MYhref{mailto:olgapogodina11@gmail.com}{olgapogodina11@gmail.com} \quad
+LinkedIn: \MYhref{https://www.linkedin.com/in/ol-pg}{ol-pg} \quad
+GitHub: \MYhref{https://github.com/ol-pg}{ol-pg} \quad
+Telegram: \MYhref{https://t.me/ol\_pg}{ol\_pg}
+\end{center}
+
+%-----------SUMMARY-----------------
+\vspace{-10pt}
+\section{Summary}
+\resumeSubHeadingListStart
+\justifying
+\item Data Engineer with extensive experience in building data platforms, ETL pipelines, and data lake architectures. Proficient in Python, PL/SQL, and Apache Airflow. Passionate about data modeling, distributed systems, and creating reliable single sources of truth for business analytics.
+\resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------------
+\vspace{-5pt}
+\section{Experience}
+\justifying
+\resumeSubHeadingListStart
+
+\resumeExpSubheading
+{Wildberries}{Moscow, Russia}
+{Data Engineer}{June 2025 --- Present}
+{\skill{Python} \skill{ClickHouse} \skill{Trino} \skill{Prometheus} \skill{Grafana} \skill{OpenMetadata}}
+\resumeDesc{
+\begin{itemize}
+\item Spearheaded the development of a new data platform architecture for the Trust \& Safety domain
+\item Integrated multiple critical data sources into ClickHouse
+\item Designed and set up a monitoring stack for Trino using Prometheus and Grafana
+\item Launched a company-wide Data Catalog with OpenMetadata
+\end{itemize}}
+
+\resumeExpSubheading
+{Yandex Practicum}{Remote}
+{Course Author}{August 2025 --- Present}
+{\skill{Python} \skill{Data Engineering} \skill{Curriculum Design}}
+\resumeDesc{
+\begin{itemize}
+\item Authoring educational content and developing curriculum for the Data Engineering course
+\end{itemize}}
+
+\resumeExpSubheading
+{Leroy Merlin}{Moscow, Russia}
+{Data Engineer}{April 2024 --- May 2025}
+{\skill{Python} \skill{Greenplum} \skill{Yandex S3} \skill{Apache Iceberg} \skill{MLOps}}
+\resumeDesc{
+\begin{itemize}
+\item Designed and implemented a data migration architecture from GreenPlum to Yandex S3, improving scalability and reducing operational costs
+\item Seamlessly integrated diverse data sources into S3, ensuring consistency and accessibility for analytics
+\item Leveraged Apache Iceberg for table format management in the data lake, enhancing ACID compliance, versioning, and query performance
+\item Collaborated with analysts to optimize and deploy ML models into production, accelerating business impact
+\end{itemize}}
+
+\resumeExpSubheading
+{Magnit}{Moscow, Russia}
+{Data Engineer (CRM Migration)}{January 2023 --- April 2024}
+{\skill{PL/SQL} \skill{Greenplum} \skill{DataVault 2.0} \skill{Data Modeling}}
+\resumeDesc{
+\begin{itemize}
+\item Designed and implemented a DataVault 2.0 model on Greenplum to support migration to a next-generation CRM system
+\item Served as technical liaison with external vendors and implementation partners to ensure alignment
+\item Engineered data unification pipelines merging information from Comarch and Manzana CRM platforms
+\item Developed optimized dimensional models supporting business intelligence and analytics needs
+\item Built and maintained data marts with automated refresh cycles to serve operational reporting
+\end{itemize}}
+
+\resumeExpSubheading
+{Sberbank}{Moscow, Russia}
+{ETL/Data Engineer}{February 2022 --- January 2023}
+{\skill{Python} \skill{Apache Hive} \skill{Jenkins} \skill{SQL}}
+\resumeDesc{
+\begin{itemize}
+\item Supported and enhanced ETL4Hadoop core functionality – a data replication service from databases/files into Apache Hive
+\item Automated data workflows by developing Jenkins pipelines to transform business logic into optimized Hive SQL
+\item Improved reliability through comprehensive unit and integration testing
+\item Designed flexible data transformation processes to handle diverse source formats
+\item Enhanced user experience by implementing configurable service parameters
+\end{itemize}}
+
+\resumeExpSubheading
+{MegaFon}{Moscow, Russia}
+{Data Engineer (B2B)}{September 2020 --- March 2022}
+{\skill{Python} \skill{ETL} \skill{SCD2} \skill{APIs}}
+\resumeDesc{
+\begin{itemize}
+\item Led development of the "Golden Record" system to create unified customer profiles from multiple data sources
+\item Designed and built ETL pipelines for automated data collection from third-party APIs and web sources
+\item Developed data matching and merging logic to generate accurate single customer views
+\item Implemented historical data storage with SCD2 methodology for tracking changes over time
+\item Optimized database architecture to efficiently handle large volumes of customer data
+\end{itemize}}
+
+\resumeSubHeadingListEnd
+
+%--------PROGRAMMING SKILLS------------
+\section{Skills}
+\vspace{5pt}
+\begin{tabular}{ll}
+\textbf{Languages:} & \quad Python, PL/SQL, PySpark, HTML, XML, C++ \\
+\textbf{Tools \& Technologies:} & \quad Greenplum, ClickHouse, Apache Airflow, Trino, Apache Iceberg, \\
+& \quad S3, Prometheus, Grafana, OpenMetadata, Jenkins, Apache Hive \\
+\textbf{Methodologies:} & \quad DataVault 2.0, SCD2, ETL/ELT, Data Modeling \\
+\textbf{Design \& Video:} & \quad Figma, Adobe Photoshop, Adobe Premiere Pro, DaVinci Resolve, \\
+& \quad Composition Theory, Color Theory, Typography \\
+\end{tabular}
+\vspace{5pt}
+
+%-----------EDUCATION-----------------
+\section{Education}
+\resumeSubHeadingListStart
+\item
+  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \textbf{National Research Nuclear University MEPhI (Moscow Engineering Physics Institute)} & 2015 -- 2021 \\
+    \textit{Specialist, Information Technology} & \\
+  \end{tabular*}
+\item
+  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \textbf{Moscow Institute of Physics and Technology (MIPT)} & February 2025 -- June 2025 \\
+    \textit{Continuing Education, CultTech: Intersection of Culture and Technology} & \\
+  \end{tabular*}
+\resumeSubHeadingListEnd
+
+%-----------RELEVANT COURSES-----------------
+\section{Relevant Courses}
+\resumeSubHeadingListStart
+
+\item
+  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \textbf{Art School} & 2005 -- 2015 \\
+    \textit{Fine Arts (Academic Drawing, Composition Theory, Color Theory \& Color Work)} & \\
+  \end{tabular*}
+
+\item
+  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \textbf{Gogol School — Directing Course} & 2023 -- 2024 \\
+    \textit{Film Directing (Adobe Premiere Pro, Frame Composition, Lighting Basics, Sound Design)} & \\
+  \end{tabular*}
+
+\resumeSubHeadingListEnd
+
+\end{document}
