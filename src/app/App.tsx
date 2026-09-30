@@ -538,6 +538,20 @@ export default function App() {
                     style={{ fontFamily: "'DM Mono', monospace" }}
                     className="text-sm text-foreground"
                   >
+                    Центральный университет
+                  </p>
+                  <p
+                    style={{ fontFamily: "'DM Mono', monospace" }}
+                    className="text-xs text-muted-foreground"
+                  >
+                    Магистратура Медиаискусство · 2026 — настоящее время
+                  </p>
+                </div>
+                <div>
+                  <p
+                    style={{ fontFamily: "'DM Mono', monospace" }}
+                    className="text-sm text-foreground"
+                  >
                     ИТМО — Внутри Art&Science
                   </p>
                   <p
@@ -615,6 +629,31 @@ export default function App() {
                     className="text-xs text-muted-foreground"
                   >
                     Дополнительное художественное образование · 2005–2015
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <p
+                style={{ fontFamily: "'DM Mono', monospace" }}
+                className="text-xs text-muted-foreground uppercase tracking-widest mb-4"
+              >
+                Работа
+              </p>
+              <div className="space-y-4">
+                <div>
+                  <p
+                    style={{ fontFamily: "'DM Mono', monospace" }}
+                    className="text-sm text-foreground"
+                  >
+                    Data Engineer · Wildberries
+                  </p>
+                  <p
+                    style={{ fontFamily: "'DM Mono', monospace" }}
+                    className="text-xs text-muted-foreground"
+                  >
+                    Инженерия данных · настоящее время
                   </p>
                 </div>
               </div>
